@@ -41,26 +41,27 @@ _Una aplicación moderna para explorar y comprender versículos bíblicos en mú
 ## 🚀 Inicio Rápido
 
 1. **Clona el repositorio**
-   \`\`\`bash
+   ```
    git clone https://github.com/JesusACD/resubiblia.git
    cd resubiblia
-   \`\`\`
+   ```
 
 2. **Instala las dependencias**
-   \`\`\`bash
+   ```
    npm install
-   \`\`\`
+   ```
 
 3. **Configura las variables de entorno**
-   \`\`\`bash
+   
+   ```
    cp .env.example .env
    # Edita .env con tus claves API
-   \`\`\`
+   ```
 
 4. **Inicia el servidor de desarrollo**
-   \`\`\`bash
+   ```
    npm run dev
-   \`\`\`
+   ```
 
 ## 🛠️ Tecnologías
 
