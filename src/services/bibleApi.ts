@@ -39,9 +39,10 @@ export async function fetchVerse(book: string, chapter: number, verse: number, l
   try {
     const bibleId = BIBLE_IDS[language];
     const translatedBook = getBookName(book, language);
-    
+
     // Primero obtenemos el ID del libro
     const booksResponse = await axios.get(`${BASE_URL}/bibles/${bibleId}/books`, { headers });
+
     const bookData = booksResponse.data.data.find((b: any) => 
       b.name.toLowerCase() === translatedBook.toLowerCase() || 
       b.nameLocal?.toLowerCase() === translatedBook.toLowerCase()
