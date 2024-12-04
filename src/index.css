@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transiciones suaves para el cambio de tema */
+html.dark {
+  color-scheme: dark;
+}
+
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+@layer base {
+  input[type="number"] {
+    @apply px-3 py-2;
+  }
+  
+  select {
+    @apply px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
+  }
+
+  select option {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
